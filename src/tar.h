@@ -1,5 +1,5 @@
 /* Extended tar format from POSIX.1.
-   Copyright (C) 1992-2024 Free Software Foundation, Inc.
+   Copyright (C) 1992-2025 Free Software Foundation, Inc.
    Written by David J. MacKenzie.
 
 This file is part of the GNU C Library.
@@ -101,7 +101,7 @@ Public License along with this library.  If not, see
 
 /* Contents of magic field and its length.  */
 #define TMAGIC	"ustar"
-#define TMAGLEN	6
+#define TMAGLEN	sizeof(TMAGIC)
 
 /* Contents of the version field and its length.  */
 #define TVERSION "00"

@@ -1,5 +1,5 @@
 /* copyin.c - extract or list a cpio archive
-   Copyright (C) 1990-2024 Free Software Foundation, Inc.
+   Copyright (C) 1990-2025 Free Software Foundation, Inc.
 
    This program is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -996,11 +996,8 @@ from_ascii (char const *where, size_t digs, unsigned logbase)
   int overflow = 0;
   static char codetab[] = "0123456789ABCDEF";
 
-  for (; *buf == ' '; buf++)
-    {
-      if (buf == end)
-	return 0;
-    }
+  for (; buf < end && *buf == ' '; buf++)
+    ;
 
   if (buf == end || *buf == 0)
     return 0;
